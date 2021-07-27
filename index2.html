@@ -1,0 +1,201 @@
+<html>
+<head>
+<style>
+*{
+list-style:none;
+padding:0;
+margin:0;
+}
+.hh{
+position:relative;
+height:80vh;
+width:100%;
+}
+.hh img{
+height:80vh;
+width:100%;
+}
+.aa{
+position:absolute;
+bottom:40%;
+left:1px;
+color:white;
+font-size:70px;
+background:gray;
+opacity:.3;
+
+}
+.aa:hover{
+opacity:.6;
+}
+.bb{
+position:absolute;
+bottom:40%;
+right:1px;
+color:white;
+font-size:70px;
+background:gray;
+opacity:.3;
+}
+.bb:hover{
+opacity:.6;
+}
+.ft{
+bottom:5px;
+left:40%;
+position:absolute;
+height:20px;
+width:20px;
+background:black;
+border-radius:50%;
+}
+.gt{
+bottom:5px;
+left:46%;
+position:absolute;
+height:20px;
+width:20px;
+background:gray;
+border-radius:50%;
+}
+.ht{
+bottom:5px;
+left:52%;
+position:absolute;
+height:20px;
+width:20px;
+background:gray;
+border-radius:50%;
+}
+.jt{
+position:absolute;
+bottom:5px;
+left:58%;
+height:20px;
+width:20px;
+background:gray;
+border-radius:50%;
+}
+
+</style>
+</head>
+<body>
+<div class="hh">
+<img id="tt" src="ru.jpg">
+<span class="aa" onclick="bul()"> < </span>
+<span class="bb" onclick="tul()"> > </span>
+<div class="pp">
+<div class="ft" id="r1"></div>
+<div class="gt" id="r2"></div>
+<div class="ht" id="r3"></div>
+<div class="jt" id="r4"></div>
+</div>
+</div>
+<script>
+var h=["ru.jpg","degree.jpg","st.jpg","bulbul.jpg"];
+var x=0;
+
+var k=document.getElementById("r1");
+var k2=document.getElementById("r2");
+var k3=document.getElementById("r3");
+var k4=document.getElementById("r4");
+
+function ful(){
+x++;
+var n=h.length;
+var d=x%n;
+document.getElementById("tt").src=h[d];
+if(d==0){
+k.style.background="black";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==1){
+k.style.background="gray";
+k2.style.background="black";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==2){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="black";
+k4.style.background="gray";
+}
+if(d==3){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="black";
+}
+}
+
+var gg=setInterval(ful, 2000);
+function tul(){
+clearInterval(gg);
+x++;
+var n=h.length;
+var d=x%n;
+document.getElementById("tt").src=h[d];
+if(d==0){
+k.style.background="black";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==1){
+k.style.background="gray";
+k2.style.background="black";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==2){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="black";
+k4.style.background="gray";
+}
+if(d==3){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="black";
+}
+}
+function bul(){
+clearInterval(gg);
+x--;
+var n=h.length;
+if(x<0)
+x=n-1;
+var d=x%n;
+document.getElementById("tt").src=h[d];
+if(d==0){
+k.style.background="black";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==1){
+k.style.background="gray";
+k2.style.background="black";
+k3.style.background="gray";
+k4.style.background="gray";
+}
+if(d==2){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="black";
+k4.style.background="gray";
+}
+if(d==3){
+k.style.background="gray";
+k2.style.background="gray";
+k3.style.background="gray";
+k4.style.background="black";
+}
+}
+</script>
+</body>
+</html>
